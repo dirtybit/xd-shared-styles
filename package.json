@@ -1,0 +1,68 @@
+{
+  "name": "xd-shared-styles",
+  "description": "Create a library of layer styles",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dirtybit/xd-shared-styles"
+  },
+  "main": "main.js",
+  "scripts": {
+    "watch": "nodemon -w src -e js,jsx,css -w webpack.config.js -x yarn build",
+    "build": "webpack --mode development",
+    "clean": "rm -rf ./main.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "@zeplin/eslint-config": "^2.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-react": "^7.13.0",
+    "nodemon": "^1.18.7",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "style-loader": "^0.22.0",
+    "yarn": "^1.12.3"
+  },
+  "eslintConfig": {
+    "settings": {
+        "react": {
+            "pragma": "React"
+        },
+        "import/extensions": [
+          ".js",
+          ".jsx"
+        ]
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["react", "import"],
+    "extends": "@zeplin/eslint-config/node",
+    "rules": {
+      "no-console": "off",
+      "import/no-unresolved": ["error", { "commonjs": true, "caseSensitive": true, "ignore": ["scenegraph", "application"] }],
+      "react/react-in-jsx-scope": "error",
+      "react/jsx-no-undef": "error",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "class-methods-use-this": "off"
+    },
+    "globals": {
+      "window": true,
+      "document": true
+    }
+  }
+}

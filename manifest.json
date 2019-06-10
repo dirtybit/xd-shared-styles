@@ -1,0 +1,34 @@
+{
+  "id": "e65b94c6",
+  "name": "Shared Styles",
+  "version": "0.1.0",
+  "host": {
+    "app": "XD",
+    "minVersion": "20.0.0"
+  },
+  "description": "Create a library of layer styles",
+  "languages": [
+    "en"
+  ],
+  "author": "Sertac Olgunsoylu",
+  "helpUrl": "https://github.com/dirtybit/xd-shared-styles",
+  "icons": [
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 96,
+      "height": 96,
+      "path": "images/icon@2x.png"
+    }
+  ],
+  "uiEntryPoints": [
+    {
+      "type": "panel",
+      "label": "List shared layer styles",
+      "panelId": "sharedStyles"
+    }
+  ]
+}
